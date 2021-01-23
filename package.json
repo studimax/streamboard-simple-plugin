@@ -1,0 +1,26 @@
+{
+  "name": "simple-plugin",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "icon": "img/icon.png",
+  "actions": {
+    "ch.studimax.ch.simple-plugin.test": {
+      "name": "Test",
+      "icon": "img/actions/test.png"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "serve": "ts-node index.ts",
+    "lint": "eslint . --ext .ts"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
+    "eslint": "^7.18.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
