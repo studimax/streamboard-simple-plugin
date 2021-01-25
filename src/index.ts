@@ -1,5 +1,4 @@
-import PluginAbstract from "streamboard-sdk/dist/PluginAbstract";
-import {EventName} from "streamboard-sdk";
+import PluginAbstract, {EventName} from "streamboard-sdk";
 
 class SimplePlugin extends PluginAbstract {
     constructor() {
