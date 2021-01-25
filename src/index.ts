@@ -1,4 +1,4 @@
-import PluginAbstract from "./src/PluginAbstract";
+import PluginAbstract from "./PluginAbstract";
 
 class SimplePlugin extends PluginAbstract {
   protected async init(): Promise<void> {
