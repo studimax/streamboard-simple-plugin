@@ -1,31 +1,30 @@
 {
   "name": "simple-plugin",
   "version": "1.0.0",
-  "main": "build/index.js",
-  "icon": "img/icon.png",
+  "main": "src/index.ts",
+  "icon": "assets/img/icon.png",
+  "identifier": "ch.studimax.simple-plugin",
   "actions": {
-    "ch.studimax.ch.simple-plugin.test": {
+    "test": {
       "name": "Test",
-      "icon": "img/actions/test.png"
+      "icon": "assets/img/actions/test.png"
     }
   },
   "scripts": {
-    "build": "webpack",
     "serve": "ts-node ./src/index.ts",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "package": "streamboard-builder"
   },
   "dependencies": {
     "streamboard-sdk": "^1.0.2"
   },
   "devDependencies": {
+    "streamboard-plugin-builder": "^1.0.1",
     "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "eslint": "^7.18.0",
-    "ts-loader": "^8.0.14",
     "ts-node": "^9.1.1",
-    "typescript": "^4.1.3",
-    "webpack": "^5.17.0",
-    "webpack-cli": "^4.4.0"
+    "typescript": "^4.1.3"
   }
 }

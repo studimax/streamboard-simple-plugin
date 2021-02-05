@@ -7,7 +7,6 @@ The `Simple Plugin` is a plugin's template for the stream-board
 
 - code written in Typescript
 - cross-platform (macOS, Windows, Linux)
-- localized
 
 # Installation
 
@@ -23,7 +22,7 @@ yarn serve
 
 ### Compiles and minifies for production
 ```
-yarn build
+yarn package
 ```
 
 ### Lints and fixes files

@@ -4,6 +4,7 @@ class SimplePlugin extends PluginAbstract {
     constructor() {
         super();
     }
+
     protected async init(): Promise<void> {
         console.log("plugin connected");
     }
@@ -11,19 +12,20 @@ class SimplePlugin extends PluginAbstract {
 
 const p = new SimplePlugin();
 let i = 0;
-p.onAction("ch.studimax.ch.simple-plugin.test", (ctx, event, data) => {
-    ctx.setText(`${++i}`);
+p.onAction("test", (ctx, event) => {
     switch (event) {
         case EventName.ADDED:
-            ctx.setText("Hello");
+            ctx.setText("...");
             ctx.setColor("#1452bc");
             break
         case EventName.CLICK:
-            ctx.setColor("#14bc30");
-            break;
-        case EventName.DBLCLICK:
-            ctx.setImage("https://media.tenor.com/images/0ca6f8a1d31646286b94671f0cd0f5a4/tenor.gif");
-            ctx.setColor("#bc141a");
+            if (++i % 2 == 0) {
+                ctx.setText("Hello");
+                ctx.setColor("#14bc30");
+            } else {
+                ctx.setText("World");
+                ctx.setColor("#cf0000");
+            }
             break;
     }
 });
