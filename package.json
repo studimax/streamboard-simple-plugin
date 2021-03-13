@@ -16,7 +16,7 @@
     "package": "streamboard-cli build"
   },
   "dependencies": {
-    "streamboard-sdk": "latest"
+    "streamboard-sdk": "1.2.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.22",
