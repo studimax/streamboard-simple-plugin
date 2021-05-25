@@ -4,7 +4,28 @@ import StreamBoardSDK from "streamboard-sdk";
 const sdk = new StreamBoardSDK();
 console.log("plugin connected");
 
-sdk.onConnection(context => {
+sdk.setConfigForm('test-a',[
+    {
+        label: "Test",
+        action: "test",
+        type: "input_select",
+        default:()=>'value_20',
+        items: ()=>Array.from(Array(100),(i,index)=>({label:`Label ${index}`,value:`value_${index}`}))
+    },
+    {
+        type: 'input_checkbox',
+        label: "Boolean",
+        action: 'check',
+    },
+    {
+        type: 'input_checkbox',
+        label: "Boolean",
+        action: 'check',
+        default:()=>true
+    }
+])
+
+sdk.onContext(context => {
     console.log(context);
     switch (context.action){
         case 'test-a':{
@@ -28,16 +49,6 @@ sdk.onConnection(context => {
             },100);
         }break;
     }
-    context.onSettings(() => {
-        return [
-            {
-                label: "Test",
-                action: "test",
-                type: "input_select",
-                items: []
-            }
-        ]
-    });
 });
 
 sdk.ready();
