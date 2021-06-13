@@ -1,6 +1,7 @@
 {
   "name": "simple-plugin",
   "version": "1.0.0",
+  "license": "MIT",
   "main": "src/index.ts",
   "icon": "assets/img/icon.png",
   "identifier": "ch.studimax.simple-plugin",
@@ -20,7 +21,7 @@
     "package": "streamboard-cli build"
   },
   "dependencies": {
-    "streamboard-sdk": "^1.5.2"
+    "streamboard-sdk": "^1.6.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.22",
